@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-    Image,
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    View,
-} from "react-native";
+import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import CustomSidebar from "./components/CustomSidebar";
 import HeaderBar from "./components/HeaderBar";
 import { useShop } from "./context/ShopContext";
@@ -27,7 +21,7 @@ export default function ProfileScreen() {
 
       <View style={[styles.card, { backgroundColor: card }]}>
         <Image
-          source={{ uri: "https://picsum.photos/200" }}
+          source={require("../assets/images/rea.jpg")}
           style={styles.image}
         />
         <Text style={styles.name}>Reajiny Hinsamrech</Text>
@@ -50,7 +44,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 110,
-    height: 110,
+    height: 150,
     borderRadius: 55,
     marginBottom: 16,
   },

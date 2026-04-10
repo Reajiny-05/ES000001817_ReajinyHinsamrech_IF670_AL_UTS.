@@ -1,14 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState } from "react";
-import {
-    FlatList,
-    Image,
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from "react-native";
+import { FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Swipeable } from "react-native-gesture-handler";
 import CustomSidebar from "./components/CustomSidebar";
 import HeaderBar from "./components/HeaderBar";
@@ -59,7 +51,7 @@ export default function WishlistScreen() {
             renderRightActions={() => renderRightActions(item)}
           >
             <View style={[styles.itemCard, { backgroundColor: card }]}>
-              <Image source={{ uri: item.image }} style={styles.image} />
+              <Image source={item.image} style={styles.image} />
               <View>
                 <Text style={styles.name}>{item.name}</Text>
                 <Text>Rp{item.price.toLocaleString()}</Text>

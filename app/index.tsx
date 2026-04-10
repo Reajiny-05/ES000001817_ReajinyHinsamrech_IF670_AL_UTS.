@@ -28,7 +28,7 @@ export default function HomeScreen() {
         >
           {products.slice(0, 5).map((item) => (
             <View key={item.id} style={[styles.slide, { backgroundColor: card }]}>
-              <Image source={{ uri: item.image }} style={styles.slideImage} />
+              <Image source={item.image} style={styles.slideImage} />
               <Text style={styles.slideTitle}>{item.name}</Text>
               <Text>Rp{item.price.toLocaleString()}</Text>
             </View>
@@ -45,7 +45,7 @@ export default function HomeScreen() {
         contentContainerStyle={{ paddingHorizontal: 10, paddingBottom: 40 }}
         renderItem={({ item }) => (
           <View style={[styles.productCard, { backgroundColor: card }]}>
-            <Image source={{ uri: item.image }} style={styles.productImage} />
+            <Image source={item.image} style={styles.productImage} />
             <Text style={styles.productName}>{item.name}</Text>
             <Text>Rp{item.price.toLocaleString()}</Text>
 

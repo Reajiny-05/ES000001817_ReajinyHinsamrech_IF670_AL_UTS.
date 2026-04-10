@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-    Alert,
-    FlatList,
-    Image,
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from "react-native";
+import { Alert, FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import CustomSidebar from "./components/CustomSidebar";
 import HeaderBar from "./components/HeaderBar";
 import { useShop } from "./context/ShopContext";
@@ -45,7 +36,7 @@ export default function CartScreen() {
         ListEmptyComponent={<Text style={styles.empty}>No items in cart</Text>}
         renderItem={({ item }) => (
           <View style={[styles.itemCard, { backgroundColor: card }]}>
-            <Image source={{ uri: item.image }} style={styles.image} />
+            <Image source={item.image} style={styles.image} />
             <View style={{ flex: 1 }}>
               <Text style={styles.name}>{item.name}</Text>
               <Text>Rp{item.price.toLocaleString()}</Text>

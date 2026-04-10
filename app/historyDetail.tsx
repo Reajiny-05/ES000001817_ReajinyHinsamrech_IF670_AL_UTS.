@@ -1,12 +1,6 @@
 import { useLocalSearchParams } from "expo-router";
 import React, { useState } from "react";
-import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
-} from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import CustomSidebar from "./components/CustomSidebar";
 import HeaderBar from "./components/HeaderBar";
 import { useShop } from "./context/ShopContext";

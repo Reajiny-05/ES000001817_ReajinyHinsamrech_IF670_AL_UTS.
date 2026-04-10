@@ -1,10 +1,9 @@
-import React, { useMemo, useState } from "react";
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, SafeAreaView, TextInput,
-} from "react-native";
 import { router } from "expo-router";
-import { useShop } from "./context/ShopContext";
-import HeaderBar from "./components/HeaderBar";
+import React, { useMemo, useState } from "react";
+import { FlatList, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import CustomSidebar from "./components/CustomSidebar";
+import HeaderBar from "./components/HeaderBar";
+import { useShop } from "./context/ShopContext";
 
 export default function HistoryScreen() {
   const { history, darkMode } = useShop();

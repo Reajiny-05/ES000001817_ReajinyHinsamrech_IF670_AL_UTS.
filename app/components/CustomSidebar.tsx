@@ -1,13 +1,7 @@
 import { router } from "expo-router";
 import React from "react";
 import {
-    Modal,
-    Pressable,
-    StyleSheet,
-    Switch,
-    Text,
-    TouchableOpacity,
-    View,
+  Modal, Pressable, StyleSheet, Switch, Text, TouchableOpacity, View,
 } from "react-native";
 import { useShop } from "../context/ShopContext";
 
@@ -21,16 +15,17 @@ export default function CustomSidebar({ visible, onClose }: Props) {
 
   const goTo = (path: "/wishlist" | "/history" | "/profile" | "/") => {
     onClose();
-    router.push("./path");
+    router.replace(path);
 
   };
+
 
   return (
     <Modal transparent visible={visible} animationType="slide">
       <View style={styles.overlay}>
         <Pressable style={styles.backdrop} onPress={onClose} />
         <View style={[styles.sidebar, { backgroundColor: darkMode ? "#333" : "#fff" }]}>
-          <Text style={styles.logo}>U-Shop</Text>
+          <Text style={styles.logo}>LivShop</Text>
 
           <TouchableOpacity style={styles.link} onPress={() => goTo("/")}>
             <Text style={styles.linkText}>Home</Text>
